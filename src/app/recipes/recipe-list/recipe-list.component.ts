@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
+import { Recipe } from '../recipe.model';
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
-  styleUrls: ['./recipe-list.component.css']
+  styleUrls: ['./recipe-list.component.css'],
 })
 export class RecipeListComponent {
-
+  // this is from the recipe.model.ts file
+  // used a ngFor to loop through the array and get all these values
+  recipes: Recipe[] = [
+    new Recipe(
+      'A Test Recipe',
+      'This is simply a test',
+      'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg'
+    ),
+  ];
 }
